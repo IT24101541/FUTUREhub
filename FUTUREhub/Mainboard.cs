@@ -11,10 +11,25 @@ namespace FUTUREhub
     public partial class Mainboard : Form
     {
         private int childFormNumber = 0;
+        private string in_name;
+        private string in_email;
+        private string in_mobile;
 
-        public Mainboard()
+        public Mainboard(string name, string email, string mobile)
         {
             InitializeComponent();
+            in_name = name;
+            in_email = email;
+            in_mobile = mobile;
+
+            this.Load += new System.EventHandler(this.Mainboard_Load);
+        }
+
+        private void Mainboard_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Name: " + in_name;
+            label2.Text = "Email: " + in_email;
+            label3.Text = "Mobile: " + in_mobile;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -108,9 +123,41 @@ namespace FUTUREhub
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            Form1 obj = new Form1();
-            obj.Show();
-            this.Close();
+            var result = MessageBox.Show("Do you want to logout?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                Form1 obj = new Form1();
+                obj.Show();
+                this.Close();
+            }
+        }
+
+        private void Mainboard_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Do you want to logout?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                Form1 obj = new Form1();
+                obj.Show();
+                this.Close();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
