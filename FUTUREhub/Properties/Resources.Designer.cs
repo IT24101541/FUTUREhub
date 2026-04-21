@@ -63,6 +63,16 @@ namespace FUTUREhub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_left_from_line {
+            get {
+                object obj = ResourceManager.GetObject("arrow-left-from-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barna_bartis_pzB5wnhg8F0_unsplash {
             get {
                 object obj = ResourceManager.GetObject("barna-bartis-pzB5wnhg8F0-unsplash", resourceCulture);

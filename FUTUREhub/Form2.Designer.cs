@@ -36,14 +36,15 @@
             label5 = new Label();
             label6 = new Label();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
+            button3 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -122,33 +123,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "User Credentials";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(234, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(280, 31);
-            textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(234, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 31);
-            textBox2.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.ForestGreen;
-            button1.Image = Properties.Resources.spell_check;
-            button1.Location = new Point(386, 162);
-            button1.Name = "button1";
-            button1.Size = new Size(128, 48);
-            button1.TabIndex = 5;
-            button1.Text = "Submit";
-            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             button2.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -162,6 +136,34 @@
             button2.TextImageRelation = TextImageRelation.TextBeforeImage;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.ForestGreen;
+            button1.Image = Properties.Resources.spell_check;
+            button1.Location = new Point(386, 162);
+            button1.Name = "button1";
+            button1.Size = new Size(128, 48);
+            button1.TabIndex = 5;
+            button1.Text = "Submit";
+            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(234, 107);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(280, 31);
+            textBox2.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(234, 55);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(280, 31);
+            textBox1.TabIndex = 3;
             // 
             // label7
             // 
@@ -207,11 +209,27 @@
             label10.TabIndex = 10;
             label10.Text = "* Use ALPHA-NUMERIC characters.";
             // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI Variable Display", 9F);
+            button3.ForeColor = SystemColors.ControlText;
+            button3.Image = Properties.Resources.arrow_left_from_line;
+            button3.Location = new Point(12, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 48);
+            button3.TabIndex = 11;
+            button3.Text = "Back";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 617);
+            Controls.Add(button3);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -248,5 +266,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Button button3;
     }
 }

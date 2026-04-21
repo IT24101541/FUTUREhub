@@ -193,6 +193,7 @@
             button8.TextAlign = ContentAlignment.MiddleRight;
             button8.TextImageRelation = TextImageRelation.ImageBeforeText;
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // label1
             // 

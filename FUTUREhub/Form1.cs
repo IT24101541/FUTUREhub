@@ -56,9 +56,11 @@ namespace FUTUREhub
                 string name = reader["name"] as string ?? string.Empty;
                 string email = reader["email"] as string ?? string.Empty;
                 string mobile = reader["mobile"] as string ?? string.Empty;
+                string user = reader["username"] as string ?? string.Empty;
+                string pwd = reader["password"] as string ?? string.Empty;
 
                 this.Hide();
-                Mainboard obj = new Mainboard(name, email, mobile);
+                Mainboard obj = new Mainboard(name, email, mobile, user, pwd);
                 obj.Show();
             }
 

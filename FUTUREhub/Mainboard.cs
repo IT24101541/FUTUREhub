@@ -14,15 +14,26 @@ namespace FUTUREhub
         private string in_name;
         private string in_email;
         private string in_mobile;
+        private string in_username;
+        private string in_password;
 
-        public Mainboard(string name, string email, string mobile)
+        public Mainboard(string name, string email, string mobile, string user, string pwd)
         {
             InitializeComponent();
             in_name = name;
             in_email = email;
             in_mobile = mobile;
+            in_username = user;
+            in_password = pwd;
+
 
             this.Load += new System.EventHandler(this.Mainboard_Load);
+        }
+
+        public Mainboard(string in_username, string in_password)
+        {
+            this.in_username = in_username;
+            this.in_password = in_password;
         }
 
         private void Mainboard_Load(object sender, EventArgs e)
@@ -158,6 +169,13 @@ namespace FUTUREhub
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 obj = new Form2(in_username, in_password);
+            obj.Show();
         }
     }
 }
