@@ -4,6 +4,8 @@ namespace FUTUREhub
 {
     public partial class Form1 : Form
     {
+        private bool showPassword = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -70,6 +72,28 @@ namespace FUTUREhub
             }
 
             con.Close();
+        }
+
+        // Toggle password visibility when the picture box is clicked
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+            if (showPassword)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                pictureBox2.Image = FUTUREhub.Properties.Resources.eye_off;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+                pictureBox2.Image = FUTUREhub.Properties.Resources.eye;
+            }
+        }
+
+        // Set the password character when the form loads
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
         }
     }
 }

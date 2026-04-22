@@ -33,6 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            pictureBox2 = new PictureBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label4 = new Label();
@@ -42,6 +43,7 @@
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -81,6 +83,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(pictureBox2);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label4);
@@ -88,17 +91,26 @@
             groupBox1.ForeColor = SystemColors.ControlDarkDark;
             groupBox1.Location = new Point(455, 125);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(532, 202);
+            groupBox1.Size = new Size(531, 202);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Login";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.eye;
+            pictureBox2.Location = new Point(473, 132);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(25, 21);
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI Variable Display", 10F);
             textBox2.Location = new Point(186, 123);
             textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(268, 34);
             textBox2.TabIndex = 3;
             // 
@@ -188,9 +200,11 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Future Lighting & Engineering (PVT) Ltd.";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,5 +222,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private PictureBox pictureBox2;
     }
 }
